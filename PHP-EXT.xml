@@ -1,0 +1,97 @@
+<templateSet group="PHP-EXT">
+  <template name="hg" value="/**&#10; * Check if $PROP_NAME$ was set.&#10; *&#10; * @return boolean&#10; */&#10;public function has$PROP_NAME_FN$()&#10;{&#10;    return isset($this-&gt;$PROP_NAME_VAR$);&#10;}&#10;&#10;/**&#10; * Get $PROP_NAME$.&#10; *&#10; * @return $PROP_TYPE$$DEFVAL$&#10; */&#10;public function get$PROP_NAME_FN$()&#10;{&#10;    if (!$this-&gt;has$PROP_NAME_FN$()) {&#10;        return null;&#10;    }&#10;    return $this-&gt;$PROP_NAME_VAR$;&#10;}" description="Has, get" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME_VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_NAME" expression="underscoresToSpaces(snakeCase(PROP_NAME_VAR))" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_NAME_FN" expression="capitalize(PROP_NAME_VAR)" defaultValue="" alwaysStopAt="false" />
+    <variable name="DEFVAL" expression="" defaultValue="|null" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="gs" value="/**&#10; * Get $PROP_NAME$.&#10; *&#10; * @return $PROP_TYPE$|$DEFVAL$&#10; */&#10;public function get$PROP_NAME_FN$()&#10;{&#10;    return $this-&gt;$PROP_NAME_VAR$;&#10;}&#10;&#10;/**&#10; * Set $PROP_NAME$.&#10; *&#10; * @param $PROP_TYPE$ $value The new value.&#10; * @return $this&#10; */&#10;public function set$PROP_NAME_FN$($$PROP_NAME_VAR$ = $DEFVAL$)&#10;{&#10;    $this-&gt;$PROP_NAME_VAR$ = $$PROP_NAME_VAR$;&#10;    return $this;&#10;}" description="Get, Set" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME_VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEFVAL" expression="" defaultValue="null" alwaysStopAt="true" />
+    <variable name="PROP_NAME" expression="underscoresToSpaces(snakeCase(PROP_NAME_VAR))" defaultValue="" alwaysStopAt="false" />
+    <variable name="PROP_NAME_FN" expression="capitalize(PROP_NAME_VAR)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="g" value="/**&#10; * Get $PROP_NAME$.&#10; *&#10; * @return $PROP_TYPE$|$DEFVAL$&#10; */&#10;public function get$PROP_NAME_FN$()&#10;{&#10;    return $this-&gt;$PROP_NAME_VAR$;&#10;}" description="get" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME_VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEFVAL" expression="" defaultValue="null" alwaysStopAt="true" />
+    <variable name="PROP_NAME" expression="underscoresToSpaces(snakeCase(PROP_NAME_VAR))" defaultValue="" alwaysStopAt="false" />
+    <variable name="PROP_NAME_FN" expression="capitalize(PROP_NAME_VAR)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="hgs" value="/**&#10; * Check if $PROP_NAME$ was set.&#10; *&#10; * @return boolean&#10; */&#10;public function has$PROP_NAME_FN$()&#10;{&#10;    return isset($this-&gt;$PROP_NAME_VAR$);&#10;}&#10;&#10;/**&#10; * Get $PROP_NAME$.&#10; *&#10; * @return $PROP_TYPE$|$DEFVAL$&#10; */&#10;public function get$PROP_NAME_FN$()&#10;{&#10;    if (!$this-&gt;has$PROP_NAME_FN$()) {&#10;        return $DEFVAL$;&#10;    }&#10;    return $this-&gt;$PROP_NAME_VAR$;&#10;}&#10;&#10;/**&#10; * Set $PROP_NAME$.&#10; *&#10; * @param $PROP_TYPE$ $value The new value.&#10; * @return $this&#10; */&#10;public function set$PROP_NAME_FN$($$PROP_NAME_VAR$ = $DEFVAL$)&#10;{&#10;    $this-&gt;$PROP_NAME_VAR$ = $$PROP_NAME_VAR$;&#10;    return $this;&#10;}" description="Has, get, set" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME_VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_NAME" expression="underscoresToSpaces(snakeCase(PROP_NAME_VAR))" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_NAME_FN" expression="capitalize(PROP_NAME_VAR)" defaultValue="" alwaysStopAt="false" />
+    <variable name="DEFVAL" expression="" defaultValue="null" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="iru" value="/**&#10; * Check if the $PROP_NAME$ with the given $IDENTIFIER$ is registered.&#10; *&#10; * @param string $$$PROP_NAME_VAR$$IDENTIFIER_FN$ The identifier of the $PROP_NAME$.&#10; * @return boolean&#10; */&#10;public function is$PROP_NAME_FN$Registered($$$PROP_NAME_VAR$$IDENTIFIER_FN$)&#10;{&#10;    return isset($this-&gt;registered$PROP_NAME_FN$s[$$$PROP_NAME_VAR$$IDENTIFIER_FN$]);&#10;}&#10;&#10;/**&#10; * Get the $PROP_NAME$ registered with the given $IDENTIFIER$.&#10; *&#10; * @param string $$$PROP_NAME_VAR$$IDENTIFIER_FN$ The $IDENTIFIER$ of the $PROP_NAME$.&#10; * @return $PROP_TYPE$|null If there is no $PROP_NAME$ registered with the given $IDENTIFIER$.&#10; */&#10;public function getRegistered$PROP_NAME_FN$($$$PROP_NAME_VAR$$IDENTIFIER_FN$)&#10;{&#10;    if (!$this-&gt;is$PROP_NAME_FN$Registered($$$PROP_NAME_VAR$$IDENTIFIER_FN$)) {&#10;        return null;&#10;    }&#10;    return $this-&gt;registered$PROP_NAME_FN$s[$$$PROP_NAME_VAR$$IDENTIFIER_FN$];&#10;}&#10;&#10;/**&#10; * Get all registered $PROP_NAME$s.&#10; *&#10; * @return $PROP_TYPE$[] With $IDENTIFIER$s as keys.&#10; */&#10;public function getRegistered$PROP_NAME_FN$s()&#10;{&#10;    return $this-&gt;registered$PROP_NAME_FN$s;&#10;}&#10;&#10;/**&#10; * Register a new $PROP_NAME$.&#10; *&#10; * @param $PROP_TYPE$ $$$PROP_NAME_VAR$ The $PROP_NAME$ to be registered.&#10; * @throws \Exception If the given $PROP_NAME$ is already registered.&#10; * @return $this&#10; */&#10;public function register$PROP_NAME_FN$($PROP_TYPE$ $$$PROP_NAME_VAR$)&#10;{&#10;    $$$PROP_NAME_VAR$$IDENTIFIER_FN$ = $$$PROP_NAME_VAR$-&gt;get$IDENTIFIER_FN$();&#10;    if ($this-&gt;is$PROP_NAME_FN$Registered($$$PROP_NAME_VAR$$IDENTIFIER_FN$)) {&#10;        throw new \Exception(&#10;            sprintf(&#10;                'The $PROP_NAME$ with the $IDENTIFIER$ &quot;%s&quot; is already registered.',&#10;                $$$PROP_NAME_VAR$$IDENTIFIER_FN$&#10;            )&#10;        );&#10;    }&#10;    $this-&gt;registered$PROP_NAME_FN$s[$$$PROP_NAME_VAR$$IDENTIFIER_FN$] = $$$PROP_NAME_VAR$;&#10;    return $this;&#10;}&#10;&#10;/**&#10; * Un-register a $PROP_NAME$ registered with the given $IDENTIFIER$.&#10; *&#10; * @param string $$$PROP_NAME_VAR$$IDENTIFIER_FN$ The $IDENTIFIER$ of the $PROP_NAME$ to be unregistered.&#10; * @throws \Exception If there is no $PROP_NAME$ registered with the given $IDENTIFIER$.&#10; * @return $PROP_TYPE$ The un-registered $PROP_NAME$.&#10; */&#10;public function unRegister$PROP_NAME_FN$($$$PROP_NAME_VAR$$IDENTIFIER_FN$)&#10;{&#10;    if ($this-&gt;is$PROP_NAME_FN$Registered($$$PROP_NAME_VAR$$IDENTIFIER_FN$)) {&#10;        throw new \Exception(&#10;            sprintf(&#10;                'There is no $PROP_NAME$ registered with the $IDENTIFIER$ &quot;%s&quot;.',&#10;                $$$PROP_NAME_VAR$$IDENTIFIER_FN$&#10;            )&#10;        );&#10;    }&#10;    $$unRegistered$PROP_NAME_FN$ = $this-&gt;registered$PROP_NAME_FN$s[$$$PROP_NAME_VAR$$IDENTIFIER_FN$];&#10;    unset($this-&gt;registered$PROP_NAME_FN$s[$$$PROP_NAME_VAR$$IDENTIFIER_FN$]);&#10;    return $$unRegistered$PROP_NAME_FN$;&#10;}" description="isRegistered, register, unregister" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME_VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="IDENTIFIER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="IDENTIFIER_FN" expression="capitalize(IDENTIFIER)" defaultValue="" alwaysStopAt="false" />
+    <variable name="PROP_NAME" expression="underscoresToSpaces(snakeCase(PROP_NAME_VAR))" defaultValue="" alwaysStopAt="false" />
+    <variable name="PROP_NAME_FN" expression="capitalize(PROP_NAME_VAR)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
